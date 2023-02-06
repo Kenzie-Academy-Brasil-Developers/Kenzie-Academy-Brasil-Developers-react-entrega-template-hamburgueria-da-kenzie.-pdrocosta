@@ -10,5 +10,9 @@ const StyledUl = styled.ul`
   justify-content: space-between;
   span {
   }
+  img{
+    border: var(--border-radius) ;
+    border-color: var(--color-grey-2);
+  }
 `;
 export default StyledUl;

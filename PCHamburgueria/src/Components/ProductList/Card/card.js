@@ -8,10 +8,11 @@ const StyledLi = styled.li`
   font-size: var(--body);
   align-items: flex-start;
   gap: 5%;
+
   padding: 3%;
   margin: 1%;
-  border: 2px var(--color-grey-3);
-  border-radius: var(--border-default);
+
+
   img {
     width: 100%;
     background-color: var(--color-grey-4);
@@ -20,6 +21,9 @@ const StyledLi = styled.li`
     margin: 2%;
     color: var( --color-grey-2);
     font-size: 8px;
+  }
+  h2{
+    margin: 4%;
   }
   .div_content {
     display: flex;

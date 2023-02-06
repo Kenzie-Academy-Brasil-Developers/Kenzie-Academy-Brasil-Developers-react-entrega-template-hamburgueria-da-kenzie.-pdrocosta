@@ -22,12 +22,10 @@ function App() {
         const response = await api.get("/products");
         setProducts(response.data);
       } catch (error) {
-        console.log(error);
       }
     }
     loadProducts();
   }, []);
-  console.log(products);
 
   return (
     <>

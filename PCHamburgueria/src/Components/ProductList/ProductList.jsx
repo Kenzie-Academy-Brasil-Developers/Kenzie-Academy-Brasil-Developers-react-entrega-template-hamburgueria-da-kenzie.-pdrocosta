@@ -8,7 +8,7 @@ const ListProducts = ({
   filteredProducts,
   setFilteredProducts,
 }) => {
-  console.log(filteredProducts);
+ 
   return (
     <StyledUl>
       {filteredProducts?.length > 0

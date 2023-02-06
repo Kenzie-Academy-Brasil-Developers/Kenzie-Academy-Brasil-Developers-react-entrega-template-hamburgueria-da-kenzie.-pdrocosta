@@ -13,25 +13,26 @@ const Header = ({
       const nameToLower = product.name.toLowerCase();
       const inputToLower = input.toLowerCase();
       const filtered = nameToLower.includes(inputToLower);
-      console.log(filtered);
+     
       if (filtered) {
         return product;
       } else {
         return;
       }
     });
-    console.log(filter2);
+   
     setFilteredProducts(filter2);
   }
-  console.log(filteredProducts);
+ 
   return (
     <StyledHeader>
       <>
         <header className="headerPC">
           <h2>
-            <span>Burguer</span>PC
+            <span>Hamburgueria</span>PC
           </h2>
-          <form action="submit">
+          <div className="div_header_input">
+          <form  action="submit">
             <input
               type="text"
               name="inputSearch"
@@ -43,7 +44,7 @@ const Header = ({
                 handleSearch(e.target.value);
               }}
             />
-            <button
+            <button id="btn_search"
               type="submit"
               onClick={(e) => {
                 e.preventDefault();
@@ -52,6 +53,8 @@ const Header = ({
               Pesquisar
             </button>
           </form>
+          </div>
+          
         </header>
       </>
     </StyledHeader>

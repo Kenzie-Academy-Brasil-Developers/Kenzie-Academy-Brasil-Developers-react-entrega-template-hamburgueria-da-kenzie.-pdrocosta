@@ -15,13 +15,13 @@ export const CartProduct = ({
     setCurrentSale(removedProducts);
   }
 
-  function counterPrice(price, multiplier) {
+  /* function counterPrice(price, multiplier) {
     console.log(price, multiplier);
     let finalPrice;
     finalPrice = Number(price.price) * Number(multiplier);
     console.log(finalPrice);
     return Number(finalPrice);
-  }
+  } */
 
   return (
     <StyledCartProduct>
@@ -29,7 +29,7 @@ export const CartProduct = ({
       <div className="div_infos">
         <h3>{name}</h3>
         <p>{category}</p>
-        <p>{price}</p>
+
 
         <input
           type="number"

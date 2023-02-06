@@ -69,7 +69,7 @@ const StyledCart = styled.div`
     color: white;
     font-size: var(--body);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;}
     .li_sale {
       display: flex;
       flex-direction: column;
@@ -82,7 +82,9 @@ const StyledCart = styled.div`
       border: 2px var(--color-grey-3);
       border-radius: var(--border-default);
     }
-  }
+    p{
+color:var(--color-grey-2)    }
+  
 `;
 
 export default StyledCart;

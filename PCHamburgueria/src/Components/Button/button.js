@@ -8,7 +8,8 @@ const StyledButton = styled.div`
     border: none;
     border-radius: var(--border-default);
     color: white;
-    margin: 2%;
+    
+    height: 100%;
   }
 `;
 

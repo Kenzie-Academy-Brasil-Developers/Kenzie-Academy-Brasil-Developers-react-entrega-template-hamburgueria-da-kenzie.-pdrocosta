@@ -2,8 +2,14 @@ import { CartProduct } from "./CartProduct/CartProduct.jsx";
 import { CartTotal } from "./CartTotal/CartTotal.jsx";
 import StyledCart from "./cart";
 
-const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal, filteredProducts, setFilteredProducts}) => {
-  console.log(currentSale);
+const Cart = ({
+  currentSale,
+  setCurrentSale,
+  cartTotal,
+  setCartTotal,
+  filteredProducts,
+  setFilteredProducts,
+}) => {
   return currentSale.length ? (
     <StyledCart>
       <div className="div_container_cart">
@@ -27,18 +33,15 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal, filteredPr
         })}
       </ul>
       <footer>
-      <div>
-        <p>Total</p>
-      </div>
-      <button>Remover todos</button>
-      <CartTotal
-        setCurrentSale={setCurrentSale}
-        currentSale={currentSale}
-        cartTotal={cartTotal}
-        setCartTotal={setCartTotal}
-      />
-      </footer>
+        
       
+        <CartTotal
+          setCurrentSale={setCurrentSale}
+          currentSale={currentSale}
+          cartTotal={cartTotal}
+          setCartTotal={setCartTotal}
+        />
+      </footer>
     </StyledCart>
   ) : (
     <>

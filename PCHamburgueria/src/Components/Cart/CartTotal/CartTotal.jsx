@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import StyledCartTotal from "./CartTotal";
 
 export function CartTotal({
@@ -7,24 +6,26 @@ export function CartTotal({
   cartTotal,
   setCartTotal,
 }) {
-  /*useEffect(
-    {
-      cartValue({ currentSale }) {
-        const newSale = currentSale.map((product) => {
-          console.log(product.price);
-          let valorTotal = 0;
-          return (valorTotal += product.price);
-        });
-        setCartTotal(newSale);
-      },
-    },
-    [currentSale]
-  );*/
-  console.log(cartTotal);
+  let valorTotal = 0;
+
+  if (currentSale.length > 0) {
+    valorTotal = currentSale.reduce((valorAtual, sale) => {
+      return valorAtual + Number(sale.price);
+    }, valorTotal);
+    setCartTotal(valorTotal.toFixed(2));
+  }
+
+  function clearCart() {}
+
   return (
-    <>
-      <p>{cartTotal}</p>
-    </>
+    <StyledCartTotal>
+      <div className="div_total_infos">
+        <p>Total</p>
+        <p>R${cartTotal}</p>
+      </div>
+
+      <button onClick={setCurrentSale([])}>Remover todos</button>
+    </StyledCartTotal>
   );
 }
 
