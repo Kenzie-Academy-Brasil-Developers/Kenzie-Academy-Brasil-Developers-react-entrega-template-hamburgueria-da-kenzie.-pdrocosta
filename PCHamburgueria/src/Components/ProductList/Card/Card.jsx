@@ -24,8 +24,7 @@ export const Card = ({
             product={product}
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
-            cartTotal={cartTotal}
-            setCartTotal={setCartTotal}
+          
           />
         </div>
       </div>

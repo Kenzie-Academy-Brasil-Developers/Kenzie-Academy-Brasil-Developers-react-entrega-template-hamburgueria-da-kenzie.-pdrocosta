@@ -3,30 +3,18 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 
-export const Button = ({
-  currentSale,
-  setCurrentSale,
-  product,
-  cartTotal,
-  setCartTotal,
-}) => {
-  function addToCart(product) {
+export const Button = ({ currentSale, setCurrentSale, product }) => {
+  function addToCart() {
     const verifiedSale = currentSale.find((sale) => sale.id === product.id);
-   /* verifiedSale
+    verifiedSale !== undefined
       ? alert("Este produto ja esta no seu carrinho.")
-      : setCurrentSale((prevState) => [...prevState, product]);*/
-      console.log(verifiedSale)
+      : setCurrentSale([...currentSale, product]);
+    console.log(verifiedSale, product);
   }
 
   return (
     <StyledButton>
-      <button
-        onClick={() => {
-          addToCart(product);
-        }}
-      >
-        Adicionar
-      </button>
+      <button onClick={addToCart}>Adicionar</button>
     </StyledButton>
   );
 };
