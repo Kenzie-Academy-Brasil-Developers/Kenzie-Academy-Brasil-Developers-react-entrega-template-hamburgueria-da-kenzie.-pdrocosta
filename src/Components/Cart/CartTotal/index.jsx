@@ -1,4 +1,4 @@
-import StyledCartTotal from "./CartTotal";
+import StyledCartTotal from "./style";
 import { useState, useEffect } from "react";
 
 export function CartTotal({
@@ -12,7 +12,7 @@ export function CartTotal({
         return valorAtual + Number(sale.price);
       }, 0)
     : 0;
-  console.log(total, currentSale);
+  console.log('CartTotalC',total, currentSale);
 
   return (
     <StyledCartTotal>
@@ -25,7 +25,7 @@ export function CartTotal({
         className="btn_remove_all"
         onClick={() => {
           setCartTotal(0);
-          setCurrentSale([]);
+          // setCurrentSale([]);
         }}
       >
         Remover todos
@@ -36,14 +36,4 @@ export function CartTotal({
 
 export default CartTotal;
 
-/* useEffect(() => {
-    if (currentSale.length > 0) {
-      let valorTotal = 0;
-      console.log(currentSale, cartTotal);
 
-      valorTotal = currentSale.reduce((valorAtual, sale) => {
-        return valorAtual + Number(sale.price);
-      }, valorTotal);
-      setCartTotal(valorTotal.toFixed(2));
-    }
-  }, [currentSale]); */

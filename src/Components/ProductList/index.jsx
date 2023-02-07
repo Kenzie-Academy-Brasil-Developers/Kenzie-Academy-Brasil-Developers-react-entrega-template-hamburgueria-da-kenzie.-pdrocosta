@@ -1,15 +1,14 @@
-import { Card } from "./Card/Card.jsx";
-import StyledUl from "./productList.js";
+import { Card } from "./Card";
+import StyledUl from "./style";
 
 const ListProducts = ({
   products,
   currentSale,
   setCurrentSale,
   filteredProducts,
-  setFilteredProducts,
-  cartTotal, setCartTotal
+  cartTotal,
+  setCartTotal,
 }) => {
- 
   return (
     <StyledUl>
       {filteredProducts.length > 0
@@ -32,7 +31,8 @@ const ListProducts = ({
                 index={index}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
-                cartTotal={cartTotal} setCartTotal={setCartTotal}
+                cartTotal={cartTotal}
+                setCartTotal={setCartTotal}
               />
             );
           })}

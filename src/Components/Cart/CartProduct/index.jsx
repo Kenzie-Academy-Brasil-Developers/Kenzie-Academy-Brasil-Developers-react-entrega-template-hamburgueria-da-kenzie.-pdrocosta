@@ -1,5 +1,5 @@
-import StyledButton from "../../Button/Button";
-import StyledCartProduct from "./cartProduct.js";
+import {Button} from "../../Button";
+import StyledCartProduct from "./style";
 import { useState, useEffect } from "react";
 
 export const CartProduct = ({
@@ -12,11 +12,11 @@ export const CartProduct = ({
 }) => {
   function removeProduct(name) {
     const removedProducts = currentSale.filter((sale) => sale.name !== name);
-    setCurrentSale(removedProducts);
+    // setCurrentSale(removedProducts);
   }
 
   function counterPrice(price, multiplier) {
-    console.log(price, multiplier);
+    console.log('counterPrice',price, multiplier);
     let finalPrice;
     finalPrice = Number(price.price) * Number(multiplier);
     console.log(finalPrice);
@@ -41,9 +41,9 @@ export const CartProduct = ({
         />
       </div>
 
-      <button type="submit" onClick={() => removeProduct(name)}>
+      <Button type="submit" onClick={() => removeProduct(name)}>
         Remover
-      </button>
+      </Button>
     </StyledCartProduct>
   );
 };

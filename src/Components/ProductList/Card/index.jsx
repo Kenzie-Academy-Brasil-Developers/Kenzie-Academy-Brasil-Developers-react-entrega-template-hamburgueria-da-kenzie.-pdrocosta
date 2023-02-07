@@ -1,12 +1,10 @@
-import { Button } from "../../Button/Button.jsx";
-import StyledLi from "./card";
+import { Button } from "../../Button";
+import StyledLi from "./style";
 
 export const Card = ({
   product,
   currentSale,
   setCurrentSale,
-  cartTotal,
-  setCartTotal,
 }) => {
   return (
     <StyledLi key={product.id}>

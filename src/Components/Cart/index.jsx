@@ -1,14 +1,12 @@
-import { CartProduct } from "./CartProduct/CartProduct.jsx";
-import { CartTotal } from "./CartTotal/CartTotal.jsx";
-import StyledCart from "./cart";
+import { CartProduct } from "./CartProduct";
+import { CartTotal } from "./CartTotal";
+import StyledCart from "./style";
 
 const Cart = ({
   currentSale,
   setCurrentSale,
   cartTotal,
   setCartTotal,
-  filteredProducts,
-  setFilteredProducts,
 }) => {
   return currentSale.length ? (
     <StyledCart>
@@ -45,14 +43,13 @@ const Cart = ({
     <>
       <StyledCart>
         <div className="div_cart_empty">
-        <h2>Carrinho de compras</h2>
+          <h2>Carrinho de compras</h2>
 
-<div>
-  <h5>Sua sacola esta vazia</h5>
-  <p>Adicione itens</p>
-</div>
+          <div>
+            <h5>Sua sacola esta vazia</h5>
+            <p>Adicione itens</p>
+          </div>
         </div>
-        
       </StyledCart>
     </>
   );

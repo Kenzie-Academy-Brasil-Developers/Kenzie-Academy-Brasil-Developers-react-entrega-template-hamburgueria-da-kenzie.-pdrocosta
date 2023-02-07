@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
 
 import GlobalStyle from "./styles/global.js";
-import ListProducts from "./Components/ProductList/ProductList.jsx";
-import Header from "./Components/Header/Header.jsx";
+import ListProducts from "./Components/ProductList";
+import Header from "./Components/Header";
 import { api } from "./services/api";
-import { ToastContainer, toast } from "react-toastify";
-import Cart from "./Components/Cart/Cart.jsx";
+import Cart from "./Components/Cart";
 import StyleSectionApp from "./styles/app";
 
 function App() {
@@ -21,8 +19,7 @@ function App() {
       try {
         const response = await api.get("/products");
         setProducts(response.data);
-      } catch (error) {
-      }
+      } catch (error) {}
     }
     loadProducts();
   }, []);
@@ -46,15 +43,14 @@ function App() {
             setProducts={setProducts}
             currentSale={currentSale}
             filteredProducts={filteredProducts}
-            setFilteredProducts={setFilteredProducts}
-            cartTotal={cartTotal} setCartTotal={setCartTotal}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
           />
           <Cart
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
-            cartTotal={cartTotal} setCartTotal={setCartTotal}
-            filteredProducts={filteredProducts}
-            setFilteredProducts={setFilteredProducts}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
           />
         </main>
       </StyleSectionApp>
