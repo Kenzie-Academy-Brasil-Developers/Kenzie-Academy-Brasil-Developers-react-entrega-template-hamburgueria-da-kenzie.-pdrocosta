@@ -1,31 +1,34 @@
 import { Button } from "../../Button/Button.jsx";
-import StyledLi from "./Card.js";
+import StyledLi from "./card";
 
-export const Card = ({ product, currentSale, setCurrentSale }) => {
+export const Card = ({
+  product,
+  currentSale,
+  setCurrentSale,
+  cartTotal,
+  setCartTotal,
+}) => {
   return (
     <StyledLi key={product.id}>
       <div className="div_content">
-        <img src={product.img} alt={product.name} />
-        <h2>{product.name}</h2>
-        <h4>{product.category}</h4>
-        <p>R${product.price}</p>
+        <div className="div_infos">
+          <div className="div_img">
+            <img src={product.img} alt={product.name} />
+          </div>
+          <div className="div_text">
+            <h2>{product.name}</h2>
+            <h4>{product.category}</h4>
+            <p>R${product.price.toFixed(2)}</p>
+          </div>
+          <Button
+            product={product}
+            currentSale={currentSale}
+            setCurrentSale={setCurrentSale}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
+          />
+        </div>
       </div>
-
-      <Button
-        product={product}
-        currentSale={currentSale}
-        setCurrentSale={setCurrentSale}
-      />
     </StyledLi>
   );
 };
-
-/* function render() {
-  //onClick={handleClick(productId = {id})}
-  // categoria, nome e preco.
-  <Button />;
-}
-export function verifyCartProduct() {
-  // utilizar toast para alertar usuario que item ja foi adicionado
-  // React-toastify
-}*/

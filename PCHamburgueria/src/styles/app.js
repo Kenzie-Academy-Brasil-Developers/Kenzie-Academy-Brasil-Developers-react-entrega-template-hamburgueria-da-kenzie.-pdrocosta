@@ -6,9 +6,16 @@ const StyleSectionApp = styled.section`
     padding: 3%;
     gap: 3%;
     flex-direction: row;
-    max-height: 80vh;
+    max-height: 100vh;
     background-color: white;
   }
+  @media (max-width:900px){
+    main{
+      flex-direction: column;
+    }
+  }
+    
+  
 `;
 
 export default StyleSectionApp;

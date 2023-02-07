@@ -4,11 +4,12 @@ const StyledButton = styled.div`
   button {
     background-color: var(--color-primary);
     font-size: 16px;
-    padding: 6%;
+
     border: none;
     border-radius: var(--border-default);
     color: white;
-    
+    padding: 15%;
+    margin: 10%;
     height: 100%;
   }
 `;

@@ -1,5 +1,5 @@
 import { Card } from "./Card/Card.jsx";
-import StyledUl from "./ProductList.js";
+import StyledUl from "./productList.js";
 
 const ListProducts = ({
   products,
@@ -7,11 +7,12 @@ const ListProducts = ({
   setCurrentSale,
   filteredProducts,
   setFilteredProducts,
+  cartTotal, setCartTotal
 }) => {
  
   return (
     <StyledUl>
-      {filteredProducts?.length > 0
+      {filteredProducts.length > 0
         ? filteredProducts.map((product, index) => {
             return (
               <Card
@@ -31,6 +32,7 @@ const ListProducts = ({
                 index={index}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
+                cartTotal={cartTotal} setCartTotal={setCartTotal}
               />
             );
           })}

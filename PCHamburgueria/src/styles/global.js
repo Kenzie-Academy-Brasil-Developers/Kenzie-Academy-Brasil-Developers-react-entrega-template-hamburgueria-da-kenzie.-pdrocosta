@@ -7,13 +7,17 @@ const GlobalStyle = createGlobalStyle`
   padding: 0px;
 }
   body {
+    overflow-x: none;
     margin: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     background: white;
     font-family: Open-Sans, Helvetica, Sans-Serif;
   
   };
+  button{
+    cursor: pointer; 
+  }
     :root {
         --color-primary: #27AE60;
         --color-primary-50: #93D7AF;
@@ -37,9 +41,14 @@ const GlobalStyle = createGlobalStyle`
         --headline: 16px;
         --body: bold 14px;
         --body-600: bold 14px;
-        
-    
+        width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  
+  overflow-x: none;
       }  
+        
+  
   
 `;
 export default GlobalStyle;

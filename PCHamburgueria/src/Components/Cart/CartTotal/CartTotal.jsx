@@ -1,4 +1,5 @@
 import StyledCartTotal from "./CartTotal";
+import { useState, useEffect } from "react";
 
 export function CartTotal({
   currentSale,
@@ -6,27 +7,43 @@ export function CartTotal({
   cartTotal,
   setCartTotal,
 }) {
-  let valorTotal = 0;
-
-  if (currentSale.length > 0) {
-    valorTotal = currentSale.reduce((valorAtual, sale) => {
-      return valorAtual + Number(sale.price);
-    }, valorTotal);
-    setCartTotal(valorTotal.toFixed(2));
-  }
-
-  function clearCart() {}
+  const total = currentSale
+    ? currentSale.reduce((valorAtual, sale) => {
+        return valorAtual + Number(sale.price);
+      }, 0)
+    : 0;
+  console.log(total, currentSale);
 
   return (
     <StyledCartTotal>
       <div className="div_total_infos">
-        <p>Total</p>
-        <p>R${cartTotal}</p>
+        <p className="total">Total</p>
+        <p className="total_num">R${(total).toFixed(2)}</p>
       </div>
 
-      <button onClick={setCurrentSale([])}>Remover todos</button>
+      <button
+        className="btn_remove_all"
+        onClick={() => {
+          setCartTotal(0);
+          setCurrentSale([]);
+        }}
+      >
+        Remover todos
+      </button>
     </StyledCartTotal>
   );
 }
 
 export default CartTotal;
+
+/* useEffect(() => {
+    if (currentSale.length > 0) {
+      let valorTotal = 0;
+      console.log(currentSale, cartTotal);
+
+      valorTotal = currentSale.reduce((valorAtual, sale) => {
+        return valorAtual + Number(sale.price);
+      }, valorTotal);
+      setCartTotal(valorTotal.toFixed(2));
+    }
+  }, [currentSale]); */

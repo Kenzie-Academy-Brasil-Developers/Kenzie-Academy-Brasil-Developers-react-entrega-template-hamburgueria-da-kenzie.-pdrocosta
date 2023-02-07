@@ -14,5 +14,9 @@ const StyledUl = styled.ul`
     border: var(--border-radius) ;
     border-color: var(--color-grey-2);
   }
+  @media (max-width:900px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 export default StyledUl;

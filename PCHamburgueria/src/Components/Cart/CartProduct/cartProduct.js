@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- const StyledCartProduct = styled.div`
+const StyledCartProduct = styled.div`
   height: 30%;
   display: flex;
   width: 48%;
@@ -8,25 +8,25 @@ import styled from "styled-components";
   gap: 3%;
   padding: 3%;
   margin: 1%;
-  border: var(--color-grey-2);
+
   border-radius: var(--border-default);
   align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
   img {
     width: 70%;
     background-color: var(--color-grey-3);
   }
-  button{
+  button {
     background-color: transparent;
-  
+
     padding: 6%;
     border: none;
-    
+
     font-size: smaller;
     color: var(--color-grey-2);
   }
-  .div_infos{
+  .div_infos {
     display: flex;
     flex-direction: column;
     margin: 3%;
@@ -36,16 +36,15 @@ import styled from "styled-components";
     width: 100%;
     gap: 5%;
   }
-  .div_infos>input{
+  .div_infos > input {
     width: 30%;
     background-color: white;
     color: black;
     border: none;
-
   }
-  h3{
+  h3 {
     margin: 15px;
   }
- `
+`;
 
 export default StyledCartProduct;

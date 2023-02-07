@@ -1,22 +1,35 @@
 import styled from "styled-components";
 
 const StyledCart = styled.div`
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   max-height: 50%;
-  padding: 0% 0% 2% 0%;
+padding-left: 2%;
+padding-right: 2%;
+align-items: center;
   height: 60vh;
-  margin: 3%;
+  margin: 0% 3% 0% 3%;
   border: 1px solid var(--color-grey2);
   border-radius: var(border-default);
   background-color: white;
   color: black;
+  overflow-x: hidden;
+  .div_cart_empty{
+    width: 100%;
+    height: 70%;
+  }
   footer {
     position: sticky;
     bottom: 0px;
     margin-top: 3%;
+    padding: 3%;
+    display: flex;
+    width: 100%;
+    div{
+      width: 100%;
+    }
   }
   ul {
     height: 70%;
@@ -44,7 +57,7 @@ const StyledCart = styled.div`
     flex-direction: column;
     border-radius: 8px;
     max-height: 50%;
-
+    width: 100%;
     height: 30%;
 
     border: 1px solid var(--color-grey2);
@@ -55,6 +68,7 @@ const StyledCart = styled.div`
   .ul_cart {
     height: 70%;
     overflow-y: auto;
+    width: 100%;
   }
   .title_cart {
     background-color: var(--color-primary);

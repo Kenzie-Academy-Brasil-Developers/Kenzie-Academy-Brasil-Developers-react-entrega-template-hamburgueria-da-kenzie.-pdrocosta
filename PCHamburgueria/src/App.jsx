@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
-import "./App.css";
+
 import GlobalStyle from "./styles/global.js";
 import ListProducts from "./Components/ProductList/ProductList.jsx";
 import Header from "./Components/Header/Header.jsx";
@@ -13,8 +13,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
   const [filter, setFilter] = useState("");
+  const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
     async function loadProducts() {
@@ -47,12 +47,12 @@ function App() {
             currentSale={currentSale}
             filteredProducts={filteredProducts}
             setFilteredProducts={setFilteredProducts}
+            cartTotal={cartTotal} setCartTotal={setCartTotal}
           />
           <Cart
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
-            cartTotal={cartTotal}
-            setCartTotal={setCartTotal}
+            cartTotal={cartTotal} setCartTotal={setCartTotal}
             filteredProducts={filteredProducts}
             setFilteredProducts={setFilteredProducts}
           />

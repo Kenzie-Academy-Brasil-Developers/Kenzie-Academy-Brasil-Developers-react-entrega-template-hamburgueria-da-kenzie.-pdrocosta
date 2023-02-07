@@ -33,8 +33,6 @@ const Cart = ({
         })}
       </ul>
       <footer>
-        
-      
         <CartTotal
           setCurrentSale={setCurrentSale}
           currentSale={currentSale}
@@ -46,12 +44,15 @@ const Cart = ({
   ) : (
     <>
       <StyledCart>
+        <div className="div_cart_empty">
         <h2>Carrinho de compras</h2>
 
-        <div>
-          <h5>Sua sacola esta vazia</h5>
-          <p>Adicione itens</p>
+<div>
+  <h5>Sua sacola esta vazia</h5>
+  <p>Adicione itens</p>
+</div>
         </div>
+        
       </StyledCart>
     </>
   );
