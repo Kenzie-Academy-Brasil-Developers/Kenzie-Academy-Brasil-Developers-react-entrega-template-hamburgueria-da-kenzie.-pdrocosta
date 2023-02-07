@@ -12,17 +12,15 @@ export const Button = ({
 }) => {
   function addToCart(product) {
     const verifiedSale = currentSale.find((sale) => sale.id === product.id);
-    verifiedSale
+   /* verifiedSale
       ? alert("Este produto ja esta no seu carrinho.")
-      : setCurrentSale((prevState) => [...prevState, product]);
+      : setCurrentSale((prevState) => [...prevState, product]);*/
+      console.log(verifiedSale)
   }
-
-
 
   return (
     <StyledButton>
       <button
-        
         onClick={() => {
           addToCart(product);
         }}
