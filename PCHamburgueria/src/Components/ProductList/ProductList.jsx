@@ -1,5 +1,5 @@
 import { Card } from "./Card/Card.jsx";
-import StyledUl from "./productList.js";
+import StyledUl from "./syleProductList.js";
 
 const ListProducts = ({
   products,

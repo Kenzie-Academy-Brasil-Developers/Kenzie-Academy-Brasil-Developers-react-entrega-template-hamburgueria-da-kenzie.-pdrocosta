@@ -1,4 +1,4 @@
-import StyledCartTotal from "./CartTotal";
+import StyledCartTotal from "./styleCartTotal";
 import { useState, useEffect } from "react";
 
 export function CartTotal({

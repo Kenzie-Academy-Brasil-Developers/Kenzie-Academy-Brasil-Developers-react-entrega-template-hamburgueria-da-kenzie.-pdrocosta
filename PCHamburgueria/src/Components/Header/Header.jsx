@@ -2,11 +2,7 @@ import StyledHeader from "./styleHeader";
 
 const Header = ({
   setFilteredProducts,
-  products,
-  setProducts,
-  filteredProducts,
-  filter,
-  setFilter,
+  products
 }) => {
   function handleSearch(input) {
     const filter2 = products.filter((product) => {
@@ -46,9 +42,9 @@ const Header = ({
             />
             <button id="btn_search"
               type="submit"
-              onClick={(e) => {
+              /* onClick={(e) => {
                 e.preventDefault();
-              }}
+              }} */
             >
               Pesquisar
             </button>

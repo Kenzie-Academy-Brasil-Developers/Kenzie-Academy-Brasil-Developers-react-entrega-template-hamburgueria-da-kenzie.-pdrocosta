@@ -1,5 +1,5 @@
-import StyledButton from "../../Button/Button";
-import StyledCartProduct from "./cartProduct.js";
+
+import StyledCartProduct from "./styleCartProduct.js";
 import { useState, useEffect } from "react";
 
 export const CartProduct = ({
@@ -12,7 +12,7 @@ export const CartProduct = ({
 }) => {
   function removeProduct(name) {
     const removedProducts = currentSale.filter((sale) => sale.name !== name);
-    setCurrentSale(removedProducts);
+   setCurrentSale(removedProducts);
   }
 
   function counterPrice(price, multiplier) {

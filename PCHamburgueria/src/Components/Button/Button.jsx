@@ -1,4 +1,4 @@
-import StyledButton from "./button.js";
+import StyledButton from "./styleButton.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";

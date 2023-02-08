@@ -1,14 +1,13 @@
 import { CartProduct } from "./CartProduct/CartProduct.jsx";
 import { CartTotal } from "./CartTotal/CartTotal.jsx";
-import StyledCart from "./cart";
+import StyledCart from "./styleCart.js";
 
 const Cart = ({
   currentSale,
   setCurrentSale,
   cartTotal,
   setCartTotal,
-  filteredProducts,
-  setFilteredProducts,
+ 
 }) => {
   return currentSale.length ? (
     <StyledCart>
