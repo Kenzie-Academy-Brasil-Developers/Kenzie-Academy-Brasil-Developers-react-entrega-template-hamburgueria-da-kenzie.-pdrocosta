@@ -2,13 +2,7 @@ import { CartProduct } from "./CartProduct/CartProduct.jsx";
 import { CartTotal } from "./CartTotal/CartTotal.jsx";
 import StyledCart from "./styleCart.js";
 
-const Cart = ({
-  currentSale,
-  setCurrentSale,
-  cartTotal,
-  setCartTotal,
- 
-}) => {
+const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal }) => {
   return currentSale.length ? (
     <StyledCart>
       <div className="div_container_cart">
@@ -44,14 +38,13 @@ const Cart = ({
     <>
       <StyledCart>
         <div className="div_cart_empty">
-        <h2>Carrinho de compras</h2>
+          <h2>Carrinho de compras</h2>
 
-<div>
-  <h5>Sua sacola esta vazia</h5>
-  <p>Adicione itens</p>
-</div>
+          <div>
+            <h5>Sua sacola esta vazia</h5>
+            <p>Adicione itens</p>
+          </div>
         </div>
-        
       </StyledCart>
     </>
   );

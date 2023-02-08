@@ -30,7 +30,6 @@ const StyledLi = styled.li`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-  
   }
   .div_text {
     height: 60%;

@@ -9,13 +9,11 @@ const StyleSectionApp = styled.section`
     max-height: 100vh;
     background-color: white;
   }
-  @media (max-width:900px){
-    main{
+  @media (max-width: 900px) {
+    main {
       flex-direction: column;
     }
   }
-    
-  
 `;
 
 export default StyleSectionApp;

@@ -1,6 +1,4 @@
-
 import StyledCartProduct from "./styleCartProduct.js";
-import { useState, useEffect } from "react";
 
 export const CartProduct = ({
   img,
@@ -12,16 +10,16 @@ export const CartProduct = ({
 }) => {
   function removeProduct(name) {
     const removedProducts = currentSale.filter((sale) => sale.name !== name);
-   setCurrentSale(removedProducts);
+    setCurrentSale(removedProducts);
   }
-
+  /* Funcao para fazer contador, nao finalizada // 
   function counterPrice(price, multiplier) {
     console.log(price, multiplier);
     let finalPrice;
     finalPrice = Number(price.price) * Number(multiplier);
     console.log(finalPrice);
     return Number(finalPrice);
-  }
+  } */
 
   return (
     <StyledCartProduct>
@@ -29,7 +27,6 @@ export const CartProduct = ({
       <div className="div_infos">
         <h3>{name}</h3>
         <p>{category}</p>
-        
 
         <input
           type="number"

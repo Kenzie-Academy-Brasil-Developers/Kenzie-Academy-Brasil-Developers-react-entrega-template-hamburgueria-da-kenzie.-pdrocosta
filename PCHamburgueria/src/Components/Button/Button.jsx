@@ -1,7 +1,5 @@
 import StyledButton from "./styleButton.js";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect, useState } from "react";
 
 export const Button = ({ currentSale, setCurrentSale, product }) => {
   function addToCart() {

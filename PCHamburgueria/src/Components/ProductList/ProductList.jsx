@@ -6,10 +6,9 @@ const ListProducts = ({
   currentSale,
   setCurrentSale,
   filteredProducts,
-  setFilteredProducts,
-  cartTotal, setCartTotal
+  cartTotal,
+  setCartTotal,
 }) => {
- 
   return (
     <StyledUl>
       {filteredProducts.length > 0
@@ -32,7 +31,8 @@ const ListProducts = ({
                 index={index}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
-                cartTotal={cartTotal} setCartTotal={setCartTotal}
+                cartTotal={cartTotal}
+                setCartTotal={setCartTotal}
               />
             );
           })}

@@ -4,7 +4,6 @@ const StyledButton = styled.div`
   button {
     background-color: var(--color-primary);
     font-size: 16px;
-
     border: none;
     border-radius: var(--border-default);
     color: white;

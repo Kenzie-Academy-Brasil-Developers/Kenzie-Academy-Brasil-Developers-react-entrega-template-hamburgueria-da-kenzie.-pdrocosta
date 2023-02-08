@@ -17,7 +17,7 @@ const StyledCartTotal = styled.div`
     background-color: transparent;
     border: none;
     font-size: 2rem;
-    cursor: pointer; 
+    cursor: pointer;
   }
   .div_total_infos {
     display: flex;

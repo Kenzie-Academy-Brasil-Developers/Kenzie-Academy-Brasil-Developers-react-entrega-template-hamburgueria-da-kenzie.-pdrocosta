@@ -8,7 +8,6 @@ const StyledCartProduct = styled.div`
   gap: 3%;
   padding: 3%;
   margin: 1%;
-
   border-radius: var(--border-default);
   align-items: center;
   justify-content: space-between;

@@ -20,7 +20,7 @@ const StyledHeader = styled.header`
   }
   .div_header_input {
     display: flex;
-   background-color: white;
+    background-color: white;
     border-radius: var(--border-default);
     border: 2px solid var(--color-grey-3);
     justify-content: space-between;
@@ -33,7 +33,6 @@ const StyledHeader = styled.header`
     border: none;
     border-radius: var(--border-default);
     color: white;
-   
   }
   form {
     display: flex;
@@ -43,13 +42,13 @@ const StyledHeader = styled.header`
     color: var(--color-grey-2);
     border: none;
     width: 60%;
-    padding: .5%;
+    padding: 0.5%;
   }
-  @media (max-width:900px) {
-    header{
+  @media (max-width: 900px) {
+    header {
       flex-direction: column;
     }
-    .div_header_input{
+    .div_header_input {
       margin-top: 10%;
     }
   }

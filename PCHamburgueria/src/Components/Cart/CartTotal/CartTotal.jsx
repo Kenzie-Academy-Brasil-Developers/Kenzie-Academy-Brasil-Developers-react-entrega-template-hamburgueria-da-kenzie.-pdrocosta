@@ -1,10 +1,9 @@
 import StyledCartTotal from "./styleCartTotal";
-import { useState, useEffect } from "react";
 
 export function CartTotal({
   currentSale,
   setCurrentSale,
-  cartTotal,
+
   setCartTotal,
 }) {
   const total = currentSale
@@ -18,7 +17,7 @@ export function CartTotal({
     <StyledCartTotal>
       <div className="div_total_infos">
         <p className="total">Total</p>
-        <p className="total_num">R${(total).toFixed(2)}</p>
+        <p className="total_num">R${total.toFixed(2)}</p>
       </div>
 
       <button
@@ -35,15 +34,3 @@ export function CartTotal({
 }
 
 export default CartTotal;
-
-/* useEffect(() => {
-    if (currentSale.length > 0) {
-      let valorTotal = 0;
-      console.log(currentSale, cartTotal);
-
-      valorTotal = currentSale.reduce((valorAtual, sale) => {
-        return valorAtual + Number(sale.price);
-      }, valorTotal);
-      setCartTotal(valorTotal.toFixed(2));
-    }
-  }, [currentSale]); */
