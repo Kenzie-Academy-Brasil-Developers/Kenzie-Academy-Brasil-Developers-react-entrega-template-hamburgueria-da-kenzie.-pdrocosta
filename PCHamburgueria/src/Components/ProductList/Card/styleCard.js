@@ -30,6 +30,7 @@ const StyledLi = styled.li`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
   }
   .div_text {
     height: 60%;
@@ -61,7 +62,8 @@ const StyledLi = styled.li`
   }
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 95%;
+
   }
   .div_infos {
     width: 100%;

@@ -11,13 +11,13 @@ export function CartTotal({
         return valorAtual + Number(sale.price);
       }, 0)
     : 0;
-  console.log(total, currentSale);
+
 
   return (
     <StyledCartTotal>
-      <div className="div_total_infos">
-        <p className="total">Total</p>
-        <p className="total_num">R${total.toFixed(2)}</p>
+      <div className="div_total">
+        <p className="total_p">Total</p>
+        <p className="total_num_p">R${total.toFixed(2)}</p>
       </div>
 
       <button

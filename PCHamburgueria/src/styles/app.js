@@ -12,6 +12,8 @@ const StyleSectionApp = styled.section`
   @media (max-width: 900px) {
     main {
       flex-direction: column;
+      align-items: center;
+      
     }
   }
 `;

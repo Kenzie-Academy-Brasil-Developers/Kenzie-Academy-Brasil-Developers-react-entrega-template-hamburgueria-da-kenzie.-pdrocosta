@@ -7,7 +7,7 @@ export const Button = ({ currentSale, setCurrentSale, product }) => {
     verifiedSale !== undefined
       ? alert("Este produto ja esta no seu carrinho.")
       : setCurrentSale([...currentSale, product]);
-    console.log(verifiedSale, product);
+
   }
 
   return (

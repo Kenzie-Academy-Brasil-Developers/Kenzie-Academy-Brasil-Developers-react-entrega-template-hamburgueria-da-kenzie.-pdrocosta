@@ -13,11 +13,12 @@ export const CartProduct = ({
     setCurrentSale(removedProducts);
   }
   /* Funcao para fazer contador, nao finalizada // 
+  let finalPrice;
   function counterPrice(price, multiplier) {
-    console.log(price, multiplier);
-    let finalPrice;
+
+    
     finalPrice = Number(price.price) * Number(multiplier);
-    console.log(finalPrice);
+   
     return Number(finalPrice);
   } */
 

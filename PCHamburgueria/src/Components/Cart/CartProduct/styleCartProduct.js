@@ -3,32 +3,35 @@ import styled from "styled-components";
 const StyledCartProduct = styled.div`
   height: 30%;
   display: flex;
-  width: 48%;
+
   color: var(--color-grey-1);
-  gap: 3%;
-  padding: 3%;
-  margin: 1%;
+
+
   border-radius: var(--border-default);
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
+
+  width: 100%;
+
   img {
-    width: 70%;
+    width: 50%;
     background-color: var(--color-grey-3);
   }
   button {
     background-color: transparent;
 
-    padding: 6%;
+    padding-right: 6%;
+    padding-top: 2%;
     border: none;
 
-    font-size: smaller;
-    color: var(--color-grey-2);
+    font-size: 1rem;
+    color: var(--color-grey-3);
   }
   .div_infos {
     display: flex;
     flex-direction: column;
-    margin: 3%;
+
     padding: 3%;
     justify-content: flex-start;
     align-items: flex-start;
@@ -42,8 +45,17 @@ const StyledCartProduct = styled.div`
     border: none;
   }
   h3 {
-    margin: 15px;
+    margin-bottom: 20%;
   }
+  p {
+    margin-bottom: 5%;
+    font-weight: 600;
+    color: var(--color-grey-2);
+  }
+  @media (max-width: 900px){
+    height: 10%;
+  }
+
 `;
 
 export default StyledCartProduct;

@@ -16,7 +16,13 @@ const StyledUl = styled.ul`
   }
   @media (max-width: 900px) {
     flex-direction: column;
-    width: 100%;
+    width: 95%;
+
+    height: 700px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-flow: nowrap;
+    margin: 1%;
   }
 `;
 export default StyledUl;

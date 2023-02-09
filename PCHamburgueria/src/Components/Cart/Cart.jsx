@@ -13,6 +13,7 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal }) => {
           return (
             <li key={curr.id} className="li_sale">
               <CartProduct
+              className="div123"
                 img={curr.img}
                 name={curr.name}
                 category={curr.category}
@@ -40,7 +41,7 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal }) => {
         <div className="div_cart_empty">
           <h2>Carrinho de compras</h2>
 
-          <div>
+          <div className="div_cart_empty_infos">
             <h5>Sua sacola esta vazia</h5>
             <p>Adicione itens</p>
           </div>

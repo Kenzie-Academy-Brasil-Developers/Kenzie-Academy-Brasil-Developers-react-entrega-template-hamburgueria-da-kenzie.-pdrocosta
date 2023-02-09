@@ -10,6 +10,9 @@ const StyledButton = styled.div`
     padding: 15%;
     margin: 10%;
     height: 100%;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
   }
 `;
 
